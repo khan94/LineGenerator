@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Categories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LineGenerator_v2_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xKL-Oe-HP8"/>
+                    <navigationItem key="navigationItem" title="Categories" id="xKL-Oe-HP8">
+                        <barButtonItem key="backBarButtonItem" title="Categories" id="XJg-ZE-b5n"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="listTableView" destination="k3V-iY-vTi" id="3F8-EO-9qQ"/>
                         <segue destination="tAY-8x-zCY" kind="show" identifier="quoteSegue" id="gyt-gd-ysG"/>
@@ -82,7 +84,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrQ-Fm-1gj">
                                         <rect key="frame" x="127" y="37" width="120" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Click!"/>
                                         <connections>
                                             <action selector="clicked:" destination="tAY-8x-zCY" eventType="touchUpInside" id="3uj-9u-vuo"/>
                                         </connections>

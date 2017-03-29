@@ -13,8 +13,14 @@ import os.log
 
 class QuoteViewController : UIViewController, HomeModelProtocal {
     
+    // MARK: Properties
     var feedItems: NSArray = NSArray()
     var mem: Int?
+    
+    var bgColor: UIColor?
+    var outerColor: UIColor?
+    
+    //MARK: UI Properties
     
     @IBOutlet weak var upperView: UIView!
     
@@ -44,6 +50,9 @@ class QuoteViewController : UIViewController, HomeModelProtocal {
         homeModel.delegate = self
         let tempCat: String = (selectedCategory?.name)!
         homeModel.downloadItems(catName: tempCat.lowercased())
+        setColor(color: (selectedCategory?.color)!)
+        upperView.backgroundColor = outerColor
+        lowerView.backgroundColor = outerColor
     }
     func itemsDownloaded(items: NSArray) {
         feedItems = items
@@ -75,6 +84,38 @@ class QuoteViewController : UIViewController, HomeModelProtocal {
         mem = rand
         // set quoteText.text to feedItems[rand]
         quoteText.text = (feedItems[rand] as! LineModel).content
+    }
+    
+    // MARK: Private Methods
+    
+    // method to set appropriate color to background and views based on category color string
+    // also set the color of the text of the button and the texts to look better
+    private func setColor(color: String){
+        
+        switch color {
+            case "brown":
+                outerColor = UIColor.brown
+            case "red":
+                outerColor = UIColor.red
+            case "yellow":
+                outerColor = UIColor.yellow
+            case "grey":
+                outerColor = UIColor.gray
+            case "purple":
+                outerColor = UIColor.purple
+            case "lgiht blue":
+                outerColor = UIColor.blue
+            case "pink":
+                outerColor = UIColor.purple // change to pink
+            case "orange":
+                outerColor = UIColor.orange
+            case "green":
+                outerColor = UIColor.green
+            case "black":
+                outerColor = UIColor.black
+            default:
+                outerColor = UIColor.blue
+        }
     }
     
     

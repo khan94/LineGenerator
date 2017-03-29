@@ -97,39 +97,45 @@ class HomeModel: NSObject, URLSessionDataDelegate {
         // COME BACK AND PIPE IF CATEGORIES OR LINES
         
         
-        for i in 0...(jsonResult.count - 1)
+        
+        
+        if (jsonResult.count != 0)
         {
-            jsonElement = jsonResult[i] as! NSDictionary
+            for i in 0...(jsonResult.count - 1)
+            {
+                jsonElement = jsonResult[i] as! NSDictionary
                 
-            
                 
-            //the following insures none of the JsonElement values are nil through optional binding
                 
-            if catOrLine! {
-                let line = LineModel()
-                // parse the lines
-                if let content = jsonElement["value"] as? String,
-                    let category = jsonElement["name"] as? String
-                {
-                    line.content = content
-                    line.category = category
+                //the following insures none of the JsonElement values are nil through optional binding
+                
+                if catOrLine! {
+                    let line = LineModel()
+                    // parse the lines
+                    if let content = jsonElement["value"] as? String,
+                        let category = jsonElement["name"] as? String
+                    {
+                        line.content = content
+                        line.category = category
+                    }
+                    
+                    lines.add(line)
                 }
-                
-                lines.add(line)
-            }
-            else{
-                let category = CategoryModel()
-                
-                if let name = jsonElement["name"] as? String,
-                    let color = jsonElement["color"] as? String
-                {
-                    category.name = name
-                    category.color = color
+                else{
+                    let category = CategoryModel()
+                    
+                    if let name = jsonElement["name"] as? String,
+                        let color = jsonElement["color"] as? String
+                    {
+                        category.name = name
+                        category.color = color
+                    }
+                    
+                    categories.add(category)
                 }
-                
-                categories.add(category)
             }
         }
+        
         
         
         DispatchQueue.main.async( execute: {
