@@ -34,6 +34,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         feedItems = items
         self.listTableView.reloadData()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

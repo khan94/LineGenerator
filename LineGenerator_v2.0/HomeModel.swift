@@ -1,4 +1,4 @@
-//
+ //
 //  HomeModel.swift
 //  LineGenerator_v2.0
 //

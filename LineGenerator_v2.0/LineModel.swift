@@ -35,7 +35,7 @@ class LineModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Content: \(content), Category: \(category)"
+        return "Content: \(String(describing: content)), Category: \(String(describing: category))"
         
     }
     

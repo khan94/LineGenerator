@@ -1,3 +1,4 @@
+
 //
 //  CategoryModel.swift
 //  LineGenerator_v2.0
@@ -35,7 +36,7 @@ class CategoryModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Name: \(name), Color: \(color)"
+        return "Name: \(String(describing: name)), Color: \(String(describing: color))"
         
     }
     
