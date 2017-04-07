@@ -23,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-iY-vTi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-iY-vTi">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell" id="1Yx-Xk-HYP">
@@ -40,6 +39,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3V-iY-vTi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="czZ-eg-d0q"/>
+                            <constraint firstItem="k3V-iY-vTi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="dZY-E3-Ad6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k3V-iY-vTi" secondAttribute="trailing" constant="-16" id="hjz-ve-oAk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k3V-iY-vTi" secondAttribute="bottom" id="sqx-iB-wzR"/>
+                            <constraint firstItem="k3V-iY-vTi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="u0w-hC-hYN"/>
+                            <constraint firstItem="k3V-iY-vTi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vP5-x4-OQ9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="xKL-Oe-HP8">
                         <barButtonItem key="backBarButtonItem" title="Categories" id="XJg-ZE-b5n"/>
@@ -51,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="134.48275862068968"/>
+            <point key="canvasLocation" x="1076" y="120"/>
         </scene>
         <!--Quote View Controller-->
         <scene sceneID="h8R-KF-4Rl">
